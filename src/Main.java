@@ -1,15 +1,12 @@
-import Task1.Task1;
-import Task2.Task2;
+import Task3.Task3;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Task2 task2 = new Task2();
+        Task3 task3 = new Task3();
         Scanner scanner = new Scanner(System.in);
-        double[] n = new double[] {1};
 
-        System.out.println(Arrays.toString(task2.tribonacci(n, 10)));
+        System.out.println(task3.minValue(new int[]{1,5,6,2,7,1,4,6,2}));
     }
 }

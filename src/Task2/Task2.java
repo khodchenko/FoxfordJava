@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class Task2 {
+public class Task2 { //Foxford
     public double countChange(int digitA, int digitB, int digitC, int digitD) {
         double cost = digitB;
         cost = cost / 100 + digitA;
@@ -81,12 +81,13 @@ public class Task2 {
 
     public double[] tribonacci(double[] s, int n) { //Tribonacci Sequence
         double[] tritab = Arrays.copyOf(s, n);
-        for(int i=3;i<n;i++){
-            tritab[i]=tritab[i-1]+tritab[i-2]+tritab[i-3];
+        for (int i = 3; i < n; i++) {
+            tritab[i] = tritab[i - 1] + tritab[i - 2] + tritab[i - 3];
         }
         return tritab;
 
     }
+
     public int[] swap(int a, int b) {
         int temp = a;
         a = b;

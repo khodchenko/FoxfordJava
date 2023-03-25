@@ -2,7 +2,7 @@ package Task1;
 
 import java.util.Scanner;
 
-public class Task1 {
+public class Task1 { //Foxford
 
     public void repeatNumber(Scanner scanner) {
         System.out.println(scanner.nextInt());
