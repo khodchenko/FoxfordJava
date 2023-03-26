@@ -1,0 +1,165 @@
+package Foxford;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+public class Foxford {
+
+    /**
+     * Foxford
+     */
+    public void repeatNumber(Scanner scanner) {
+        System.out.println(scanner.nextInt());
+    }
+
+    /**
+     * Foxford
+     */
+    public void helloAnything(Scanner scanner) {
+        System.out.println("Hello, " + scanner.nextLine() + "!");
+    }
+
+    /**
+     * Foxford
+     */
+    public void swapTwoDigitNumber(Scanner scanner) {
+        int number = scanner.nextInt();
+        System.out.println(number % 10 * 10 + number / 10);
+    }
+
+
+    /**
+     *Foxford
+     */
+    public double countChange(int digitA, int digitB, int digitC, int digitD) {
+        double cost = digitB;
+        cost = cost / 100 + digitA;
+        double price = digitD;
+        price = price / 100 + digitC;
+        return cost - price;
+    }
+
+    /**
+     *Foxford
+     */
+    public int[] sort3Digit(int digitA, int digitB, int digitC) {
+        int temp;
+
+        if (digitC < digitA) {
+            temp = digitA;
+            digitA = digitC;
+            digitC = temp;
+        }
+
+        if (digitB < digitA) {
+            temp = digitB;
+            digitA = digitB;
+            digitB = temp;
+        }
+
+        if (digitC < digitB) {
+            temp = digitB;
+            digitB = digitC;
+            digitC = temp;
+        }
+
+        return new int[]{digitA, digitB, digitC};
+    }
+
+    /**
+     *Foxford
+     */
+    public boolean checkTwoCoordinates(int x1, int y1, int x2, int y2) {
+        return x1 * x2 > 0 && y1 * y2 > 0;
+    }
+
+    /**
+     *Foxford
+     */
+    public int largestNumber(Scanner scanner) {
+        int largestInt = 0;
+        List<Integer> list = new ArrayList<>();
+        while (scanner.hasNextInt()) {
+            list.add(scanner.nextInt());
+        }
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) > largestInt) {
+                largestInt = list.get(i);
+            }
+        }
+        return largestInt;
+    }
+
+    /**
+     *Foxford
+     */
+    public boolean triangleCheck(int a, int b, int c) {
+        return a + b > c | a + c > b | b + c > a;
+    }
+
+    /**
+     * Foxford
+     */
+    public int summaDecimal(Scanner scanner) {
+        int summa = 0;
+        List<Integer> list = new ArrayList<>();
+        while (scanner.hasNextInt()) {
+            list.add(scanner.nextInt());
+        }
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) % 10 == 0) {
+                summa += list.get(i);
+            }
+        }
+        return summa;
+    }
+
+    /**
+     * Foxford
+     */
+    public int countOnesInBinary(int a) {
+        int counter = 0;
+        char[] array = Integer.toBinaryString(a).toCharArray();
+        for (int i = 0; i < array.length; i++) {
+            counter++;
+        }
+        return counter;
+    }
+
+    public int counterSumAllIntDivider(int number) {
+        int sum = 0;
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    /**
+     * Foxford
+     */
+    public int maxMultiple(int divisor, int bound) { //Codewars Maximum Multiple
+        int maxMultiple = 0;
+        for (int i = 1; i <= bound; i++) {
+            if (i % divisor == 0) {
+                maxMultiple = i;
+            }
+        }
+        return maxMultiple;
+    }
+
+    /**
+     * Foxford Sort array by descending order and replace digit repeats
+     *
+     * @param array a digits
+     * @return a string of digits that divided by spaces.
+     */
+    public static String arraySortDescendingOrder(int[] array) {
+        Arrays.sort(array);
+
+        return Arrays.toString(Arrays.stream(array).distinct().toArray());
+    }
+}
