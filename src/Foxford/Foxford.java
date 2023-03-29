@@ -31,7 +31,7 @@ public class Foxford {
 
 
     /**
-     *Foxford
+     * Foxford
      */
     public double countChange(int digitA, int digitB, int digitC, int digitD) {
         double cost = digitB;
@@ -42,7 +42,7 @@ public class Foxford {
     }
 
     /**
-     *Foxford
+     * Foxford
      */
     public int[] sort3Digit(int digitA, int digitB, int digitC) {
         int temp;
@@ -69,14 +69,14 @@ public class Foxford {
     }
 
     /**
-     *Foxford
+     * Foxford
      */
     public boolean checkTwoCoordinates(int x1, int y1, int x2, int y2) {
         return x1 * x2 > 0 && y1 * y2 > 0;
     }
 
     /**
-     *Foxford
+     * Foxford
      */
     public int largestNumber(Scanner scanner) {
         int largestInt = 0;
@@ -93,7 +93,7 @@ public class Foxford {
     }
 
     /**
-     *Foxford
+     * Foxford
      */
     public boolean triangleCheck(int a, int b, int c) {
         return a + b > c | a + c > b | b + c > a;
@@ -139,27 +139,68 @@ public class Foxford {
     }
 
     /**
-     * Foxford
-     */
-    public int maxMultiple(int divisor, int bound) { //Codewars Maximum Multiple
-        int maxMultiple = 0;
-        for (int i = 1; i <= bound; i++) {
-            if (i % divisor == 0) {
-                maxMultiple = i;
-            }
-        }
-        return maxMultiple;
-    }
-
-    /**
      * Foxford Sort array by descending order and replace digit repeats
      *
-     * @param array a digits
+     * @param array of digits
      * @return a string of digits that divided by spaces.
      */
     public static String arraySortDescendingOrder(int[] array) {
         Arrays.sort(array);
 
         return Arrays.toString(Arrays.stream(array).distinct().toArray());
+    }
+
+    /**
+     * Foxford sorting one dimensional array of Integer by Bubble sorting.
+     *
+     * @param array of digits
+     * @return sorted array.
+     */
+    public int[] sortArrayOfIntByBubble(int[] array) {
+        boolean sorted = false;
+        int temp;
+        while (!sorted) {
+            sorted = true;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] > array[i + 1]) {
+                    temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+                    sorted = false;
+                }
+            }
+        }
+        return array;
+    }
+
+    /**
+     * Foxford sorting one dimensional array of Integer by Insertion sort.
+     * Note: In the worst-case scenario - an array sorted in descending order.
+     * In this case, each iteration shifts the sorted array by one O(n). You would have to do this for every element in every array, which would result in a complexity of O(n^2).
+     * @param array of digits
+     * @return sorted array.
+     */
+    public int[] sortArrayOfIntByInsertion(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            int current = array[i];
+            int j = i - 1;
+            while (j >= 0 && current < array[j]) {
+                array[j + 1] = array[j];
+                j--;
+            }
+
+            array[j + 1] = current;
+        }
+        return array;
+    }
+
+    /**
+     * Swapping method
+     */
+    private int[] swap(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
+        return new int[]{a, b};
     }
 }

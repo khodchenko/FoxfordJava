@@ -4,26 +4,13 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class Codewars {
-
     /**
-     * Codewars Credit Card Mask
+     * Codewars Credit Card Mask: a function maskify, which changes all but the last four characters into '#'.
+     *
+     * @param str is unencrypted string.
+     * @return encrypted string.
      */
-    public String maskify(String str) {
-        char[] array = str.toCharArray();
-        if (array.length <= 4) {
-            return str;
-        }
-        for (int i = 0; i < array.length - 4; i++) {
-            array[i] = '#';
-        }
-        StringBuilder newString = new StringBuilder();
-        for (char c : array) {
-            newString.append(c);
-        }
-        return String.valueOf(newString);
-    }
-
-    public String maskifyShort(String str) {//Credit Card Mask
+    public String maskify(String str) {//Credit Card Mask
         return str.replaceAll(".(?=.{4})", "#");
     }
 
@@ -39,11 +26,17 @@ public class Codewars {
 
     }
 
-    public int[] swap(int a, int b) {
-        int temp = a;
-        a = b;
-        b = temp;
-        return new int[]{a, b};
+    /**
+     * Codewars Maximum Multiple
+     */
+    public int maxMultiple(int divisor, int bound) {
+        int maxMultiple = 0;
+        for (int i = 1; i <= bound; i++) {
+            if (i % divisor == 0) {
+                maxMultiple = i;
+            }
+        }
+        return maxMultiple;
     }
 
     /**
@@ -182,7 +175,7 @@ public class Codewars {
     /**
      * Codewars Decode the Morse code dictionary
      */
-    public static String getLetter(String code) {
+    private static String getLetter(String code) {
         switch (code) {
             case ".-":
                 return "A";
@@ -320,5 +313,15 @@ public class Codewars {
         }
 
         return sb.reverse().toString();
+    }
+
+    /**
+     * Swapping method
+     */
+    private int[] swap(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
+        return new int[]{a, b};
     }
 }

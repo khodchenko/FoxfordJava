@@ -1,5 +1,7 @@
 import Codewars.Codewars;
+import Foxford.Foxford;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -7,8 +9,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Codewars codewars = new Codewars();
+        Foxford foxford = new Foxford();
 
-        System.out.println(codewars.cleanString("a#bc#d"));
+        System.out.println(Arrays.toString(foxford.sortArrayOfIntByInsertion(new int[]{2, 32, 32, 1, 23, 5, 7, 37, 81})));
 
     }
 
