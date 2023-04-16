@@ -1,7 +1,8 @@
 import Codewars.Codewars;
+import Codewars.Kuy6;
 import Foxford.Foxford;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
         Codewars codewars = new Codewars();
         Foxford foxford = new Foxford();
 
-        System.out.println(Arrays.toString(foxford.sortArrayOfIntByInsertion(new int[]{2, 32, 32, 1, 23, 5, 7, 37, 81})));
+        System.out.println(Kuy6.findMissingLetter((new char[] { 'a','b','c','d','f' })));
 
     }
 

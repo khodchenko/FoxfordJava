@@ -10,21 +10,21 @@ public class Foxford {
     /**
      * Foxford
      */
-    public void repeatNumber(Scanner scanner) {
+    public static void repeatNumber(Scanner scanner) {
         System.out.println(scanner.nextInt());
     }
 
     /**
      * Foxford
      */
-    public void helloAnything(Scanner scanner) {
+    public static void helloAnything(Scanner scanner) {
         System.out.println("Hello, " + scanner.nextLine() + "!");
     }
 
     /**
      * Foxford
      */
-    public void swapTwoDigitNumber(Scanner scanner) {
+    public static void swapTwoDigitNumber(Scanner scanner) {
         int number = scanner.nextInt();
         System.out.println(number % 10 * 10 + number / 10);
     }
@@ -33,7 +33,7 @@ public class Foxford {
     /**
      * Foxford
      */
-    public double countChange(int digitA, int digitB, int digitC, int digitD) {
+    public static double countChange(int digitA, int digitB, int digitC, int digitD) {
         double cost = digitB;
         cost = cost / 100 + digitA;
         double price = digitD;
@@ -44,7 +44,7 @@ public class Foxford {
     /**
      * Foxford
      */
-    public int[] sort3Digit(int digitA, int digitB, int digitC) {
+    public static int[] sort3Digit(int digitA, int digitB, int digitC) {
         int temp;
 
         if (digitC < digitA) {
@@ -71,14 +71,14 @@ public class Foxford {
     /**
      * Foxford
      */
-    public boolean checkTwoCoordinates(int x1, int y1, int x2, int y2) {
+    public static  boolean checkTwoCoordinates(int x1, int y1, int x2, int y2) {
         return x1 * x2 > 0 && y1 * y2 > 0;
     }
 
     /**
      * Foxford
      */
-    public int largestNumber(Scanner scanner) {
+    public static int largestNumber(Scanner scanner) {
         int largestInt = 0;
         List<Integer> list = new ArrayList<>();
         while (scanner.hasNextInt()) {
@@ -95,14 +95,14 @@ public class Foxford {
     /**
      * Foxford
      */
-    public boolean triangleCheck(int a, int b, int c) {
+    public static boolean triangleCheck(int a, int b, int c) {
         return a + b > c | a + c > b | b + c > a;
     }
 
     /**
      * Foxford
      */
-    public int summaDecimal(Scanner scanner) {
+    public static int summaDecimal(Scanner scanner) {
         int summa = 0;
         List<Integer> list = new ArrayList<>();
         while (scanner.hasNextInt()) {
@@ -119,7 +119,7 @@ public class Foxford {
     /**
      * Foxford
      */
-    public int countOnesInBinary(int a) {
+    public static int countOnesInBinary(int a) {
         int counter = 0;
         char[] array = Integer.toBinaryString(a).toCharArray();
         for (int i = 0; i < array.length; i++) {
@@ -128,7 +128,7 @@ public class Foxford {
         return counter;
     }
 
-    public int counterSumAllIntDivider(int number) {
+    public static int counterSumAllIntDivider(int number) {
         int sum = 0;
         for (int i = 2; i <= number / 2; i++) {
             if (number % i == 0) {
@@ -156,7 +156,7 @@ public class Foxford {
      * @param array of digits
      * @return sorted array.
      */
-    public int[] sortArrayOfIntByBubble(int[] array) {
+    public static int[] sortArrayOfIntByBubble(int[] array) {
         boolean sorted = false;
         int temp;
         while (!sorted) {
@@ -180,7 +180,7 @@ public class Foxford {
      * @param array of digits
      * @return sorted array.
      */
-    public int[] sortArrayOfIntByInsertion(int[] array) {
+    public static int[] sortArrayOfIntByInsertion(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int current = array[i];
             int j = i - 1;

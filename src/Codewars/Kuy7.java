@@ -1,0 +1,69 @@
+package Codewars;
+
+import java.util.Arrays;
+
+public class Kuy7 {
+    /**
+     * 7: Codewars Credit Card Mask: a function maskify, which changes all but the last four characters into '#'.
+     *
+     * @param str is unencrypted string.
+     * @return encrypted string.
+     */
+    public static String maskify(String str) {//Credit Card Mask
+        return str.replaceAll(".(?=.{4})", "#");
+    }
+
+    /**
+     * 7: Codewars Form The Minimum
+     *
+     * @param values list of digits
+     * @return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
+     */
+    public static int minValueAnotherVariant(int[] values) {
+        int end = values.length;
+
+        for (int i = 0; i < end; i++) {
+            for (int j = i + 1; j < end; j++) {
+                if (values[i] == values[j]) {
+                    values[j] = values[end - 1];
+                    end--;
+                    j--;
+                }
+            }
+        }
+
+        int[] whitelist = new int[end];
+
+        System.arraycopy(values, 0, whitelist, 0, end);
+
+        Arrays.sort(whitelist);
+
+        int minValue = 0;
+        for (int i = whitelist.length - 1, n = 0; i >= 0; --i, n++) {
+            int pos = (int) Math.pow(10, i);
+            minValue += whitelist[n] * pos;
+        }
+
+        return minValue;
+    }
+
+    /**
+     * 7: Codewars Maximum Multiple
+     * Given a Divisor and a Bound, find N.
+     * N is less than or equal to bound.
+     * N is greater than 0.
+     *
+     * @param divisor int
+     * @param bound   int
+     * @return the largest integer N
+     */
+    public static int maxMultiple(int divisor, int bound) {
+        int maxMultiple = 0;
+        for (int i = 1; i <= bound; i++) {
+            if (i % divisor == 0) {
+                maxMultiple = i;
+            }
+        }
+        return maxMultiple;
+    }
+}
