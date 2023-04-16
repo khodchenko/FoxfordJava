@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Kuy7 {
     /**
      * 7: Codewars Credit Card Mask: a function maskify, which changes all but the last four characters into '#'.
-     *
      * @param str is unencrypted string.
      * @return encrypted string.
      */
@@ -15,7 +14,6 @@ public class Kuy7 {
 
     /**
      * 7: Codewars Form The Minimum
-     *
      * @param values list of digits
      * @return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
      */
@@ -52,7 +50,6 @@ public class Kuy7 {
      * Given a Divisor and a Bound, find N.
      * N is less than or equal to bound.
      * N is greater than 0.
-     *
      * @param divisor int
      * @param bound   int
      * @return the largest integer N
@@ -65,5 +62,23 @@ public class Kuy7 {
             }
         }
         return maxMultiple;
+    }
+
+    /**
+     * 7: Isograms
+     * a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+     * @param str that contains only letters
+     * @return true if str is Isogram
+     */
+    public static boolean  isIsogram(String str) {
+        str = str.toLowerCase();
+        for(int i = 0; i < str.length(); i++) {
+            for(int j = i+1; j < str.length(); j++) {
+                if(str.charAt(i) == str.charAt(j)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
