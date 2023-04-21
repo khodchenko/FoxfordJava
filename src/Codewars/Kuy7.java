@@ -1,6 +1,7 @@
 package Codewars;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Kuy7 {
     /**
@@ -100,5 +101,20 @@ public class Kuy7 {
                 .mapToInt(String::length)
                 .min()
                 .orElse(0);
+    }
+
+    /**
+     * 7: Reverse words
+     *
+     * @param original any string
+     * @return reversed string.
+     */
+    public static String reverseWords(final String original) {
+        if (original.trim().isEmpty()) {
+            return original;
+        }
+        return Arrays.stream(original.split(" "))
+                .map(s -> new StringBuilder(s).reverse().toString())
+                .collect(Collectors.joining(" "));
     }
 }

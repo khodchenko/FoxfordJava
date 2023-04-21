@@ -12,7 +12,7 @@ public class Main {
         Codewars codewars = new Codewars();
         Foxford foxford = new Foxford();
 
-        System.out.println(Kuy7.findShort("turns out random test cases are easier than writing out basic ones"));
+        System.out.println(Kuy7.reverseWords("The quick brown fox jumps over the lazy dog."));
 
     }
 
