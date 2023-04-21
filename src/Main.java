@@ -1,5 +1,5 @@
 import Codewars.Codewars;
-import Codewars.Kuy6;
+import Codewars.Kuy7;
 import Foxford.Foxford;
 
 
@@ -12,7 +12,7 @@ public class Main {
         Codewars codewars = new Codewars();
         Foxford foxford = new Foxford();
 
-        System.out.println(Kuy6.findMissingLetter((new char[] { 'a','b','c','d','f' })));
+        System.out.println(Kuy7.findShort("turns out random test cases are easier than writing out basic ones"));
 
     }
 
