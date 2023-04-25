@@ -150,4 +150,21 @@ public class Kuy7 {
         }
         return summa%2==0 ? "even" : "odd";
     }
+
+    /**
+     * 7: Highest and Lowest
+     *
+     * @param numbers a string of space separated numbers
+     * @return a string the highest and lowest number "max_value min_value".
+     */
+    public static String highAndLow(String numbers) {
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (String s : numbers.split(" ")) {
+            int num = Integer.parseInt(s);
+            max = Math.max(max, num);
+            min = Math.min(min, num);
+        }
+        return max + " " + min;
+    }
 }
