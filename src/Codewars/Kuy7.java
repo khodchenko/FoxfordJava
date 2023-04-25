@@ -117,4 +117,24 @@ public class Kuy7 {
                 .map(s -> new StringBuilder(s).reverse().toString())
                 .collect(Collectors.joining(" "));
     }
+
+    /**
+     * 7: Vowel Count
+     *
+     * @param str will only consist of lower case letters and/or spaces.
+     * @return the number (count) of vowels in the given string.
+     */
+    public static int getCount(String str) {
+        char[] charArray = str.toLowerCase().toCharArray();
+        int counter = 0;
+        for (char c : charArray) {
+            if (c == 'a' ||
+                    c == 'e' ||
+                    c == 'i' ||
+                    c == 'o' ||
+                    c == 'u') counter++;
+        }
+        return counter;
+    }
+
 }
