@@ -137,4 +137,17 @@ public class Kuy7 {
         return counter;
     }
 
+    /**
+     * 7: Odd or Even?
+     *
+     * @param array a list of integers
+     * @return a string matching "odd" or "even" whether the sum of its elements is odd or even.
+     */
+    public static String oddOrEven (int[] array) {
+        int summa = 0;
+        for (int i : array){
+            summa = summa+i;
+        }
+        return summa%2==0 ? "even" : "odd";
+    }
 }
