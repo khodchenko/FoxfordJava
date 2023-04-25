@@ -143,12 +143,12 @@ public class Kuy7 {
      * @param array a list of integers
      * @return a string matching "odd" or "even" whether the sum of its elements is odd or even.
      */
-    public static String oddOrEven (int[] array) {
+    public static String oddOrEven(int[] array) {
         int summa = 0;
-        for (int i : array){
-            summa = summa+i;
+        for (int i : array) {
+            summa = summa + i;
         }
-        return summa%2==0 ? "even" : "odd";
+        return summa % 2 == 0 ? "even" : "odd";
     }
 
     /**
@@ -166,5 +166,16 @@ public class Kuy7 {
             min = Math.min(min, num);
         }
         return max + " " + min;
+    }
+
+    /**
+     * 7: Binary Addition
+     *
+     * @param a first number
+     * @param b second number
+     * @return a sum of two numbers in binary format.
+     */
+    public static String binaryAddition(int a, int b){
+        return Integer.toBinaryString(a+b);
     }
 }
