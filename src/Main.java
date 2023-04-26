@@ -1,8 +1,9 @@
 import Codewars.Codewars;
 import Codewars.Kuy7;
 import Foxford.Foxford;
+import Foxford.ObjectTask;
 
-
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -11,8 +12,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Codewars codewars = new Codewars();
         Foxford foxford = new Foxford();
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("2fs");
+        ObjectTask object = new ObjectTask("TEST", 1,list);
 
-        System.out.println(Kuy7.reverseWords("The quick brown fox jumps over the lazy dog."));
+
+        System.out.println(object.toString());
 
     }
 
