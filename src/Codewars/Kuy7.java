@@ -117,4 +117,65 @@ public class Kuy7 {
                 .map(s -> new StringBuilder(s).reverse().toString())
                 .collect(Collectors.joining(" "));
     }
+
+    /**
+     * 7: Vowel Count
+     *
+     * @param str will only consist of lower case letters and/or spaces.
+     * @return the number (count) of vowels in the given string.
+     */
+    public static int getCount(String str) {
+        char[] charArray = str.toLowerCase().toCharArray();
+        int counter = 0;
+        for (char c : charArray) {
+            if (c == 'a' ||
+                    c == 'e' ||
+                    c == 'i' ||
+                    c == 'o' ||
+                    c == 'u') counter++;
+        }
+        return counter;
+    }
+
+    /**
+     * 7: Odd or Even?
+     *
+     * @param array a list of integers
+     * @return a string matching "odd" or "even" whether the sum of its elements is odd or even.
+     */
+    public static String oddOrEven(int[] array) {
+        int summa = 0;
+        for (int i : array) {
+            summa = summa + i;
+        }
+        return summa % 2 == 0 ? "even" : "odd";
+    }
+
+    /**
+     * 7: Highest and Lowest
+     *
+     * @param numbers a string of space separated numbers
+     * @return a string the highest and lowest number "max_value min_value".
+     */
+    public static String highAndLow(String numbers) {
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (String s : numbers.split(" ")) {
+            int num = Integer.parseInt(s);
+            max = Math.max(max, num);
+            min = Math.min(min, num);
+        }
+        return max + " " + min;
+    }
+
+    /**
+     * 7: Binary Addition
+     *
+     * @param a first number
+     * @param b second number
+     * @return a sum of two numbers in binary format.
+     */
+    public static String binaryAddition(int a, int b){
+        return Integer.toBinaryString(a+b);
+    }
 }
